@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'taggit',
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    'haystack',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -88,8 +89,12 @@ DATABASES = {
         'PORT': '3306'
     }
 }
-
-
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+        'URL': 'http://192.168.221.153:8983/solr/twinkle'
+    }
+}
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
