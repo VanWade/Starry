@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7446182-46d3-4a21-80a9-3d04777ac0ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/twinkle/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/twinkle/static/css/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/twinkle/templates/registration/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/twinkle/templates/registration/logged_out.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/twinkle/templates/registration/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/twinkle/templates/registration/password_change_done.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/twinkle/templates/registration/password_change_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/twinkle/templates/twinkle/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Starry.iml" afterPath="$PROJECT_DIR$/.idea/Starry.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Starry/settings.py" afterPath="$PROJECT_DIR$/Starry/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Starry/urls.py" afterPath="$PROJECT_DIR$/Starry/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/twinkle/views.py" afterPath="$PROJECT_DIR$/twinkle/views.py" />
     </list>
     <ignored path="Starry.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -154,6 +140,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="VanWade &lt;chenzhaonian@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -587,6 +578,13 @@
       <option name="number" value="Default" />
       <updated>1466139258467</updated>
     </task>
+    <task id="LOCAL-00001" summary="add user login,logout">
+      <created>1466502666144</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1466502666144</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -595,6 +593,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18944691" sideWeight="0.4954023" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280116" sideWeight="0.50390625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.57713497" sideWeight="0.49777496" order="7" side_tool="false" content_ui="tabs" />
@@ -624,6 +623,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add user login,logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="add user login,logout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
