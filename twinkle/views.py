@@ -7,6 +7,10 @@ from django.views.generic import ListView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from taggit.models import Tag
 from django.db.models import Count
+from django.contrib.auth import authenticate, login
+from forms import LoginForm
+from django.http import HttpResponse
+
 def twinkle_list(request, tag_slug=None):
     object_list = Twinkle.published.all()
 
@@ -49,3 +53,28 @@ def twinkle_detail(request, year, month, day, slug):
                                                                              '-publish')[:4]
     return render(request,'twinkle/Twinkle/detail.html',{'twinkle': twinkle,
                   'similar_twinkles': similar_twinkles})
+
+
+def user_login(request):
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+            user = authenticate(username=cd['username'],
+                password=cd['password'])
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return HttpResponse('Authenticated successfully')
+                else:
+                    return HttpResponse('Disabled account')
+            else:
+                return HttpResponse('Invalid login')
+    else:
+        form = LoginForm()
+        return render(request, 'twinkle/login/login.html', {'form': form})
+
+from django.contrib.auth.decorators import login_required
+@login_required
+def dashboard(request):
+    return render(request,'twinkle/dashboard.html',{'section': 'dashboard'})

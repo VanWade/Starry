@@ -31,13 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'twinkle',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'twinkle',
     'taggit',
     'django.contrib.sites',
     'django.contrib.sitemaps',
@@ -85,14 +85,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'USER': 'root',
         'PASSWORD': '123456',
-        'HOST': '192.168.221.153',
+        'HOST': '192.168.56.101',
         'PORT': '3306'
     }
 }
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        'URL': 'http://192.168.221.153:8983/solr/twinkle'
+        'URL': 'http://192.168.56.101:8983/solr/twinkle'
     }
 }
 # Internationalization
@@ -113,3 +113,7 @@ USE_L10N = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+from django.core.urlresolvers import reverse_lazy
+LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
+LOGIN_URL = reverse_lazy('login')
+LOGOUT_URL = reverse_lazy('logout')
