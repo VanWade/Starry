@@ -1,0 +1,18 @@
+{% extends "twinkle/base.html" %}
+
+{% block title %}{{ twinkle.title }}{% endblock %}
+
+{% block content %}
+    <h1>{{ twinkle.title }}</h1>
+    <p class="date">Published {{ twinkle.publish }} by {{ twinkle.author }}</p>
+    {{ twinkle.body|linebreaks }}
+
+    <h2>Similar twinkles</h2>
+    {% for twinkle in similar_twinkles %}
+        <p><a href="{{ twinkle.get_absolute_url }}">{{ twinkle.title }}</a></p>
+        {% empty %}
+            There are no similar twinkles yet.
+    {% endfor %}
+{% endblock %}
+
+

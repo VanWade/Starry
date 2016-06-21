@@ -1,0 +1,7 @@
+<ul>
+	{% for twinkle in latest_twinkles %}
+		<li> 
+				<a href="{{ twinkle.get_absolute_url }}">{{ twinkle.title }}</a>
+		</li>
+	{% endfor %}
+</ul>

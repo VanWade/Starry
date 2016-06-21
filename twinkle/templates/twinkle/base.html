@@ -1,0 +1,20 @@
+{% load staticfiles %}
+{% load twinkle_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'css/twinkle.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div id="content">
+    {% block content %}
+    {% endblock %}
+    </div>
+    <div id="sidebar">
+        <h2>My twinkle</h2>
+        <p>This is my twinkle.</p>
+        {% show_latest_twinkles 3 %}
+    </div>
+</body>
+</html>

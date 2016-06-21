@@ -1,0 +1,33 @@
+{% extends "twinkle/base.html" %}
+
+{% block title  %}My Twinkle{% endblock %}
+{% block content %}
+
+
+
+  <h1>My Twinkle</h1>
+  {% if tag %}
+    <h2>Twinkles tagged with "{{ tag.name }}"</h2>
+  {% endif %}
+  {% for twinkle in twinkles %}
+    <h2>
+      <a href="{{ twinkle.get_absolute_url }}">{{ twinkle.title }}</a>
+    </h2>
+    <p class="tags">
+      Tags:
+      {% for tag in twinkle.tags.all %}
+      <a href="{% url 'twinkle:twinkle_list_by_tag' tag.slug %}">
+      {{ tag.name }}
+      </a>
+      {% if not forloop.last %}, {% endif %}
+      {% endfor %}
+    </p>
+    <p class="date">
+      Published {{ twinkle.publish }} by {{ twinkle.author }}
+    </p>
+    {{ twinkle.body|truncatewords:30|linebreaks }}
+  {% endfor %}
+{% include "pagination.html" with page=twinkles %}
+{% endblock %}
+
+
